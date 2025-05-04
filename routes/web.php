@@ -61,6 +61,7 @@ Route::get('imajenes', function () {
     return view('galeria.imajenes');
 })->name('imajenes');
 
+Route::view('usuarior', 'usuarior')->name('usuarior');
 
 Route::view('leccion-a1', 'leccion-a1')->name('leccion-a1');
 

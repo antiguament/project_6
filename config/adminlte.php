@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'sancarloscomercio',
+    'title' => 'blackelk',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>admin</b>HOME',
+    'logo' => '<b>black</b>ELK',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
