@@ -32,12 +32,12 @@
                   </a>
               </li>
               <li>
-                  <a href="{{ route('welcome') }}" class="block py-2 px-3 text-white hover:bg-gray-700 rounded-sm md:hover:bg-transparent md:hover:text-teal-400 md:p-0 transition duration-300 ease-in-out">
+                  <a href="{{ route('imajenes') }}" class="block py-2 px-3 text-white hover:bg-gray-700 rounded-sm md:hover:bg-transparent md:hover:text-teal-400 md:p-0 transition duration-300 ease-in-out">
                       imagenes
                   </a>
               </li>
                  <li>
-                  <a href="{{ route('welcome') }}" class="block py-2 px-3 text-white hover:bg-gray-700 rounded-sm md:hover:bg-transparent md:hover:text-teal-400 md:p-0 transition duration-300 ease-in-out">
+                  <a href="{{ route('video') }}" class="block py-2 px-3 text-white hover:bg-gray-700 rounded-sm md:hover:bg-transparent md:hover:text-teal-400 md:p-0 transition duration-300 ease-in-out">
                       videos
                   </a>
               </li>

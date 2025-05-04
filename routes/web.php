@@ -51,6 +51,17 @@ Route::get('/blog/{post}/edit', [PostController::class, 'edit'])->name('posts.ed
 Route::patch('/blog/{post}', [PostController::class, 'update'])->name('posts.update');
 
 Route::view('nosotros', 'nosotros')->name('nosotros');
+
+Route::get('video', function () {
+    return view('galeria.video');
+})->name('video');
+
+
+Route::get('imajenes', function () {
+    return view('galeria.imajenes');
+})->name('imajenes');
+
+
 Route::view('leccion-a1', 'leccion-a1')->name('leccion-a1');
 
 
