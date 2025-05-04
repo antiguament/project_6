@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domina el Inglés Paso a Paso</title>
+    <title>BlackELK - Adiestramiento Canino Profesional</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
@@ -17,29 +17,57 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            background: linear-gradient(135deg, #4a4a4a, #1a1a1a);
             padding: 5rem 2rem;
             text-align: center;
             color: white;
             border-radius: 0 0 20px 20px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+            z-index: 0;
         }
 
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .hero h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #e8c547;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .btn {
@@ -57,24 +85,26 @@
         }
 
         .btn-primary {
-            background-color: #ff7e5f;
-            box-shadow: 0 4px 15px rgba(255, 126, 95, 0.3);
+            background-color: #e8c547;
+            color: #1a1a1a;
+            box-shadow: 0 4px 15px rgba(232, 197, 71, 0.3);
         }
 
         .btn-primary:hover {
-            background-color: #ff6b4a;
+            background-color: #e0b933;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 126, 95, 0.4);
+            box-shadow: 0 6px 20px rgba(232, 197, 71, 0.4);
         }
 
         .btn-secondary {
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(232, 197, 71, 0.15);
             backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(232, 197, 71, 0.3);
+            color: #e8c547;
         }
 
         .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.25);
+            background-color: rgba(232, 197, 71, 0.25);
             transform: translateY(-2px);
         }
 
@@ -137,7 +167,7 @@
             left: 0;
             width: 40px;
             height: 3px;
-            background: linear-gradient(90deg, #6e8efb, #a777e3);
+            background: linear-gradient(90deg, #e8c547, #d4a72c);
             border-radius: 3px;
         }
 
@@ -158,15 +188,15 @@
         }
 
         .btn-card {
-            background: linear-gradient(90deg, #6e8efb, #a777e3);
-            color: white;
+            background: linear-gradient(90deg, #e8c547, #d4a72c);
+            color: #1a1a1a;
             font-size: 0.9rem;
             padding: 0.6rem 1.5rem;
         }
 
         .btn-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(110, 142, 251, 0.3);
+            box-shadow: 0 5px 15px rgba(232, 197, 71, 0.3);
         }
 
         .importance-section {
@@ -212,7 +242,7 @@
 
         .importance-point h4 {
             font-size: 1.2rem;
-            color: #6e8efb;
+            color: #e8c547;
             margin-bottom: 1rem;
             font-weight: 600;
         }
@@ -227,30 +257,91 @@
         .section-cta {
             text-align: center;
             padding: 3rem 2rem;
-            background-color: white;
+            background-color: #1a1a1a;
+            color: white;
         }
 
         .section-cta h3 {
             font-size: 1.8rem;
-            color: #4a4a4a;
+            color: white;
             margin-bottom: 1.5rem;
+        }
+
+        .testimonials {
+            padding: 4rem 2rem;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2rem;
+            color: #4a4a4a;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        .author-info h5 {
+            margin: 0;
+            color: #4a4a4a;
+            font-size: 1rem;
+        }
+
+        .author-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #999;
+            font-style: normal;
         }
 
         .nav-button {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            background: linear-gradient(135deg, #e8c547, #d4a72c);
             width: 60px;
             height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: #1a1a1a;
             font-size: 1.5rem;
             text-decoration: none;
-            box-shadow: 0 5px 20px rgba(110, 142, 251, 0.3);
+            box-shadow: 0 5px 20px rgba(232, 197, 71, 0.3);
             transition: all 0.3s ease;
             z-index: 100;
             opacity: 0;
@@ -264,7 +355,7 @@
 
         .nav-button:hover {
             transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(110, 142, 251, 0.4);
+            box-shadow: 0 8px 25px rgba(232, 197, 71, 0.4);
         }
 
         @media (max-width: 768px) {
@@ -276,7 +367,7 @@
                 font-size: 2rem;
             }
             
-            .levels-section, .importance-section, .section-cta {
+            .levels-section, .importance-section, .testimonials, .section-cta {
                 padding: 3rem 1.5rem;
             }
             
@@ -293,111 +384,152 @@
 <body>
     <section class="hero">
         <div class="hero-content">
-            <h2>Domina el Inglés con Confianza</h2>
-            <p>Aprende de manera estructurada y alcanza la fluidez paso a paso con nuestro método probado.</p>
+            <div class="logo">BlackELK</div>
+            <h2>Adiestramiento Canino Profesional</h2>
+            <p>Transforma la relación con tu perro mediante métodos científicos y respetuosos</p>
             <div>
-                <a href="#levels" class="btn btn-primary">Explora los Niveles</a>
-                <a href="#importance" class="btn btn-secondary">¿Por qué funciona?</a>
+                <a href="#programs" class="btn btn-primary">Nuestros Programas</a>
+                <a href="#method" class="btn btn-secondary">Nuestro Método</a>
             </div>
         </div>
     </section>
 
-    <section id="levels" class="levels-section">
-        <h2>Tu Camino hacia la Fluidez</h2>
-        <p class="subtitle">Niveles claramente definidos para un aprendizaje efectivo</p>
+    <section id="programs" class="levels-section">
+        <h2>Programas de Adiestramiento</h2>
+        <p class="subtitle">Soluciones personalizadas para cada necesidad canina</p>
         
         <div class="levels-grid">
             <div class="level-card">
-                <h3>A1 - Principiante</h3>
-                <p><strong>Contenido:</strong> Saludos, presentaciones, información personal básica, objetos cotidianos, números.</p>
-                <p><strong>Importancia:</strong> La base fundamental para comunicarte en situaciones simples.</p>
+                <h3>Educación Básica</h3>
+                <p><strong>Contenido:</strong> Órdenes básicas (sentado, quieto, ven), paseo sin tirar, socialización.</p>
+                <p><strong>Beneficios:</strong> Establece los fundamentos para una convivencia armoniosa.</p>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-card">Empieza aquí</a>
+                    <a href="#" class="btn btn-card">Más información</a>
                 </div>
             </div>
             
             <div class="level-card">
-                <h3>A2 - Básico</h3>
-                <p><strong>Contenido:</strong> Frases frecuentes, información sobre familia, compras, lugares de interés.</p>
-                <p><strong>Importancia:</strong> Te permite desenvolverte en tareas cotidianas básicas.</p>
+                <h3>Modificación de Conducta</h3>
+                <p><strong>Contenido:</strong> Tratamiento de miedos, ansiedad por separación, agresividad.</p>
+                <p><strong>Beneficios:</strong> Soluciona problemas de comportamiento de raíz.</p>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-card">Continuar</a>
+                    <a href="#" class="btn btn-card">Más información</a>
                 </div>
             </div>
             
             <div class="level-card">
-                <h3>B1 - Intermedio</h3>
-                <p><strong>Contenido:</strong> Puntos principales de textos claros, viajes, temas conocidos.</p>
-                <p><strong>Importancia:</strong> Clave para comprender conversaciones sobre temas familiares.</p>
+                <h3>Adiestramiento Avanzado</h3>
+                <p><strong>Contenido:</strong> Órdenes complejas, habilidades especiales, deportes caninos.</p>
+                <p><strong>Beneficios:</strong> Estimula mentalmente a tu perro y fortalece vuestro vínculo.</p>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-card">Siguiente nivel</a>
+                    <a href="#" class="btn btn-card">Más información</a>
                 </div>
             </div>
             
             <div class="level-card">
-                <h3>B2 - Intermedio Alto</h3>
-                <p><strong>Contenido:</strong> Ideas de textos complejos, interacción fluida, argumentación.</p>
-                <p><strong>Importancia:</strong> Te acerca a la fluidez en discusiones.</p>
+                <h3>Preparación para Exposiciones</h3>
+                <p><strong>Contenido:</strong> Stacking, movimiento en pista, presentación profesional.</p>
+                <p><strong>Beneficios:</strong> Optimiza el potencial de tu perro en competiciones.</p>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-card">Avanzar</a>
+                    <a href="#" class="btn btn-card">Más información</a>
                 </div>
             </div>
             
             <div class="level-card">
-                <h3>C1 - Avanzado</h3>
-                <p><strong>Contenido:</strong> Textos exigentes, expresión fluida, uso flexible del idioma.</p>
-                <p><strong>Importancia:</strong> Comunicación efectiva en contextos profesionales.</p>
+                <h3>Terapia Asistida</h3>
+                <p><strong>Contenido:</strong> Preparación para intervenciones asistidas con animales.</p>
+                <p><strong>Beneficios:</strong> Convierte a tu perro en un agente de cambio social.</p>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-card">Profundizar</a>
+                    <a href="#" class="btn btn-card">Más información</a>
                 </div>
             </div>
             
             <div class="level-card">
-                <h3>C2 - Maestría</h3>
-                <p><strong>Contenido:</strong> Comprensión de todo, expresión precisa, matices.</p>
-                <p><strong>Importancia:</strong> Dominio total como hablante nativo.</p>
+                <h3>Programa Personalizado</h3>
+                <p><strong>Contenido:</strong> Entrenamiento a medida según tus necesidades específicas.</p>
+                <p><strong>Beneficios:</strong> Soluciones adaptadas a tu situación particular.</p>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-card">Perfeccionar</a>
+                    <a href="#" class="btn btn-card">Consultar</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="importance" class="importance-section">
+    <section id="method" class="importance-section">
         <div class="importance-container">
-            <h2>¿Por qué aprender de forma estructurada?</h2>
+            <h2>Nuestro Método BlackELK</h2>
             
             <div class="importance-grid">
                 <div class="importance-point">
-                    <h4>Enfoque Claro</h4>
-                    <p>Sabes exactamente qué aprender en cada etapa sin distracciones ni información innecesaria.</p>
-                    <a href="#" class="btn btn-card">Ver método</a>
+                    <h4>Refuerzo Positivo</h4>
+                    <p>Utilizamos técnicas basadas en premios y refuerzos, nunca en castigos o métodos aversivos.</p>
+                    <a href="#" class="btn btn-card">Ver técnicas</a>
                 </div>
                 
                 <div class="importance-point">
-                    <h4>Progreso Medible</h4>
-                    <p>Puedes ver tu avance claramente, lo que aumenta tu motivación y compromiso.</p>
-                    <a href="#" class="btn btn-card">Ver progreso</a>
+                    <h4>Ciencia del Comportamiento</h4>
+                    <p>Nuestros métodos están respaldados por estudios científicos sobre aprendizaje animal.</p>
+                    <a href="#" class="btn btn-card">Ver estudios</a>
                 </div>
                 
                 <div class="importance-point">
-                    <h4>Fundamentos Sólidos</h4>
-                    <p>Cada nivel construye sobre el anterior, asegurando una base lingüística robusta.</p>
-                    <a href="#" class="btn btn-card">Ver fundamentos</a>
+                    <h4>Enfoque Holístico</h4>
+                    <p>Consideramos todos los aspectos de la vida del perro: físico, mental y emocional.</p>
+                    <a href="#" class="btn btn-card">Ver enfoque</a>
                 </div>
                 
                 <div class="importance-point">
-                    <h4>Eficiencia</h4>
-                    <p>Aprendes lo más importante primero, optimizando tu tiempo y esfuerzo.</p>
-                    <a href="#" class="btn btn-card">Optimizar</a>
+                    <h4>Entrenamiento Individualizado</h4>
+                    <p>Cada perro es único y merece un plan de entrenamiento personalizado.</p>
+                    <a href="#" class="btn btn-card">Ver ejemplos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Historias de Éxito</h2>
+        <p class="subtitle">Lo que dicen nuestros clientes</p>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"BlackELK transformó completamente la relación con mi pastor alemán. En solo 4 semanas resolvimos problemas de agresividad que llevaban años."</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Cliente satisfecho">
+                    <div class="author-info">
+                        <h5>María González</h5>
+                        <p>Dueña de Thor</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p>"Gracias al programa de educación básica, ahora puedo pasear a mis dos labradores sin que me arrastren. ¡Increíble diferencia!"</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente satisfecho">
+                    <div class="author-info">
+                        <h5>Carlos Martínez</h5>
+                        <p>Dueño de Max y Luna</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p>"Preparamos a nuestro border collie para agility con BlackELK y los resultados han sido espectaculares. ¡Ahora competimos a nivel nacional!"</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente satisfecho">
+                    <div class="author-info">
+                        <h5>Ana Rodríguez</h5>
+                        <p>Dueña de Flash</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="section-cta">
-        <h3>¿Listo para comenzar tu viaje con el inglés?</h3>
-        <a href="#levels" class="btn btn-primary">Empieza ahora</a>
+        <h3>¿Listo para transformar la vida de tu perro?</h3>
+        <a href="#programs" class="btn btn-primary">Empieza ahora</a>
     </div>
 
     <a href="#" class="nav-button">↑</a>
@@ -425,4 +557,3 @@
     </script>
 </body>
 </html>
-

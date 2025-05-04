@@ -71,3 +71,37 @@ Route::get('/load-component/{topic}', function ($topic) {
             return response('Component not found', 404);
     }
 });
+
+
+
+
+// Rutas para las fases de entrenamiento
+Route::prefix('entrenamiento')->group(function () {
+    Route::get('evaluacion-inicial', function () {
+        return view('entrenamiento.evaluacion-inicial');
+    })->name('evaluacion-inicial');
+    
+    Route::get('socializacion', function () {
+        return view('entrenamiento.socializacion');
+    })->name('socializacion');
+    
+    Route::get('obediencia-fundamental', function () {
+        return view('entrenamiento.obediencia-fundamental');
+    })->name('obediencia-fundamental');
+    
+    Route::get('correccion-conductas', function () {
+        return view('entrenamiento.correccion-conductas');
+    })->name('correccion-conductas');
+    
+    Route::get('entrenamiento-avanzado', function () {
+        return view('entrenamiento.entrenamiento-avanzado');
+    })->name('entrenamiento-avanzado');
+    
+    Route::get('especializacion', function () {
+        return view('entrenamiento.especializacion');
+    })->name('especializacion');
+    
+    Route::get('seguimiento', function () {
+        return view('entrenamiento.seguimiento');
+    })->name('seguimiento');
+});
